@@ -9,7 +9,7 @@
 	File Name  : CtxVdDrain.ps1
 	Author     : John Billekens - john@j81.nl
 	Requires   : Citrix Delivery Controller 7.x
-	Version    : 20160114.2124
+	Version    : 20160205.1759
 .SYNTAX
 	.\CtxVdDrain.ps1
 #>
@@ -19,14 +19,6 @@ Param(
 )
 
 $Host.UI.RawUI.WindowTitle = "CtxVdDrain"
-$newsize = $Host.UI.RawUI.buffersize
-$newsize.height = 3000
-$newsize.width = 120
-$Host.UI.RawUI.buffersize = $newsize
-$newsize = $Host.UI.RawUI.WindowSize
-$newsize.height = 50
-$newsize.width = 120
-$Host.UI.RawUI.WindowSize = $newsize
 clear-host
 
 IF (-not (Get-Module -Name Citrix.*)) {
